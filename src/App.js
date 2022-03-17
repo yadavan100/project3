@@ -38,8 +38,10 @@ const App = () => {
 
  return(
     <div className="App">
-     <img class="pokemonTitle" src="./images/reciipepic-removebg-preview.png" alt=""/>
-     
+      <h2 className='titlename'>SuperRecipes</h2>
+      
+  
+
       <form onSubmit={getSearch} className="search-form">
        <input 
        className="search-bar" 
@@ -48,6 +50,7 @@ const App = () => {
        onChange={updateSearch} />
         <button className="search-button" type = "submit"> Search</button>
       </form>
+      <div className="recipes">
      {recipes.map(recipe =>(
        <Recipe 
        key={recipe.recipe.label}
@@ -59,10 +62,24 @@ const App = () => {
        />
 
      ))}
+     </div>
+
+     
     </div>
+    
+
+
+
+
+
   );
 
+
+ 
+
 };
+
+
   
 
 
